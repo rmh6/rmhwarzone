@@ -1,3 +1,4 @@
+
 <img src="https://static.fontbolt.com/themes-452px/64db277fd967e.png" alt="Profil Warzone" style="width: 100%;
     height: 250px; border-radius:0px; object-fit: cover; display: block;">
 
@@ -9,6 +10,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+.toggle-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 10px;
+  color: #f1c40f;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  text-shadow: 0 0 10px #f1c40f;
+}
+
     /* --- STYLE GLOBAL --- */
     body {
       margin: 0;
@@ -167,6 +192,17 @@
   </style>
 </head>
 
+<script>
+function toggleCard(id) {
+  const content = document.getElementById(id);
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+</script>
+
 <body>
 
 <header>
@@ -206,23 +242,69 @@
   <h3>Meilleures Classes MW6</h3>
   <div class="card-grid">
 
+    <!-- M8A1 -->
     <div class="card">
       <img src="https://img.nolagvpn.com/m8a1/gunFullDisplay" alt="M8A1">
       <h4>M8A1</h4>
       <p>AR stable et puissante, parfaite pour les longues distances.</p>
+
+      <div class="toggle-btn" onclick="toggleCard('m8a1-class')">⬇️ Voir la classe</div>
+
+      <div class="toggle-content" id="m8a1-class">
+        <p><strong>Ta classe M8A1 :</strong></p>
+        <ul>
+          <li>bouche : silencieux monolithique</li>
+          <li>Chargeur : tambour cap.redline</li>
+          <li>canon : conv M8A1 auto-X8</li>
+          <li>poignée arrière : KES Raze</li>
+          <li>munition : haute pression 5.56 OTAN</li>
+        </ul>
+      </div>
     </div>
 
+    <!-- KOGOT -->
     <div class="card">
       <img src="https://assets.codmunity.gg/optimized/Kogot-7-Close-Range-Warzone-Loadout-CODMunity-5417.webp" alt="Kogot">
       <h4>Kogot</h4>
       <p>SMG ultra rapide, idéale pour les combats rapprochés.</p>
+
+      <div class="toggle-btn" onclick="toggleCard('kogot-class')">⬇️ Voir la classe</div>
+
+      <div class="toggle-content" id="kogot-class">
+        <p><strong>Ta classe Kogot :</strong></p>
+        <ul>
+          <li>Canon : EMT 3 19.6</li>
+          <li>poignée : EAM lightpat</li>
+          <li>chargeur : étendu VEX</li>
+          <li>Laser : légère REMEDY</li>
+          <li>Crosse : F7-HOWL</li>
+        </ul>
+      </div>
     </div>
 
+    <!-- REV‑46 -->
     <div class="card">
       <img src="https://img.wzstats.gg/rev-46/gunFullDisplay" alt="REV-46">
       <h4>REV‑46</h4>
       <p>Mitraillette polyvalente, très utilisée en compétitif.</p>
+
+      <div class="toggle-btn" onclick="toggleCard('rev46-class')">⬇️ Voir la classe</div>
+
+      <div class="toggle-content" id="rev46-class">
+        <p><strong>Ta classe REV‑46 :</strong></p>
+        <ul>
+          <li>bouche : hawker serie 45</li>
+          <li>canon : caudal target</li>
+          <li>accessoire canon : sapper guard</li>
+          <li>chargeur : étendu gator</li>
+          <li>poignée arrière : traversal</li>
+        </ul>
+      </div>
     </div>
+
+  </div>
+</section>
+
 
   </div>
 </section>
@@ -241,9 +323,7 @@
   © <span id="year"></span>  Warzone — Fan Site MW3.
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+
 
 </body>
 </html>
