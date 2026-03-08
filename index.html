@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title> Warzone rmh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* --- STYLE GLOBAL --- */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0b0b;
+      color: #e5e5e5;
+      overflow-x: hidden;
+    }
+
+    /* --- HEADER --- */
+    header {
+      background: rgba(0,0,0,0.85);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #f1c40f;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+      animation: fadeDown 0.8s ease;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #f1c40f;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    nav a {
+      color: #e5e5e5;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+      text-shadow: 0 0 10px #f1c40f;
+    }
+
+    /* --- HERO / BANNIÈRE --- */
+    .hero {
+      background: url('/assets/images/warzone/banner.jpg') center/cover no-repeat;
+      padding: 150px 40px;
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 15px black;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .hero h2 {
+      font-size: 52px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      background: #f1c40f;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffe27a;
+      box-shadow: 0 0 15px #f1c40f;
+    }
+
+    /* --- SECTIONS --- */
+    .section {
+      padding: 60px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease;
+    }
+
+    .section h3 {
+      text-transform: uppercase;
+      color: #f1c40f;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    /* --- GRID --- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* --- CARTES --- */
+    .card {
+      background: #111;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #f1c40f55;
+      border-color: #f1c40f;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h4 {
+      margin-top: 0;
+      color: #f1c40f;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #333;
+      margin-top: 40px;
+      color: #777;
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1> Warzone rmh</h1>
+  <nav>
+    <a href="#news">Actus</a>
+    <a href="#classes">Classes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Bienvenue Soldat</h2>
+  <p>Infos, classes, astuces et nouveautés MW3 — tout est ici.</p>
+  <a href="#news" class="btn">Voir les actus</a>
+</section>
+
+<section class="section" id="news">
+  <h3>Actualités MW3</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h4>🔥 Nouvelle Saison</h4>
+      <p>Découvrez les nouvelles armes, maps et équilibrages de la dernière mise à jour.</p>
+    </div>
+    <div class="card">
+      <h4>⚔️ Meta du moment</h4>
+      <p>Les armes les plus puissantes utilisées par les pros et streamers.</p>
+    </div>
+    <div class="card">
+      <h4>🛡️ Nouveaux modes</h4>
+      <p>Analyse des modes temporaires et stratégies pour gagner.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="classes">
+  <h3>Meilleures Classes MW3</h3>
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="/assets/images/warzone/m8a1.png" alt="M8A1">
+      <h4>M8A1</h4>
+      <p>AR stable et puissante, parfaite pour les longues distances.</p>
+    </div>
+
+    <div class="card">
+      <img src="/assets/images/warzone/kogot.png" alt="Kogot">
+      <h4>Kogot</h4>
+      <p>SMG ultra rapide, idéale pour les combats rapprochés.</p>
+    </div>
+
+    <div class="card">
+      <img src="/assets/images/warzone/rev46.png" alt="REV-46">
+      <h4>REV‑46</h4>
+      <p>Mitraillette polyvalente, très utilisée en compétitif.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h3>Contact</h3>
+  <p>Tu veux proposer une classe, un guide ou rejoindre l’équipe ?</p>
+  <ul>
+    <li>Email : rayanatri42@gmail.com</li>
+    <li>Discord : rmh.953</li>
+    <li>Snapchat : rmh.953</li>
+  </ul>
+</section>
+
+<footer>
+  © <span id="year"></span> RIMA Warzone — Fan Site MW3.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
